@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="supersecureapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super Secure App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zip-rN-USN">
+                                <rect key="frame" x="16" y="44" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V85-dw-KUe">
+                                <rect key="frame" x="16" y="73" width="343" height="30"/>
+                                <state key="normal" title="Write to Filesystem"/>
+                                <connections>
+                                    <action selector="writeToFilesystem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ce8-lu-x3y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deb-6w-6cB">
+                                <rect key="frame" x="16" y="111" width="343" height="30"/>
+                                <state key="normal" title="Read from Filesystem"/>
+                                <connections>
+                                    <action selector="readFromFilesystem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nq8-Jw-6dc"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Timestamp" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T8w-uc-6xq">
+                                <rect key="frame" x="10" y="149" width="349" height="204"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="T8w-uc-6xq" secondAttribute="bottom" constant="425" id="4Nc-tT-pLG"/>
+                            <constraint firstItem="V85-dw-KUe" firstAttribute="leading" secondItem="Zip-rN-USN" secondAttribute="leading" id="IAg-Sc-8eC"/>
+                            <constraint firstItem="V85-dw-KUe" firstAttribute="trailing" secondItem="Zip-rN-USN" secondAttribute="trailing" id="IMj-77-XIY"/>
+                            <constraint firstItem="T8w-uc-6xq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="InE-3f-ClP"/>
+                            <constraint firstItem="Zip-rN-USN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MD6-16-pDe"/>
+                            <constraint firstItem="Zip-rN-USN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Tdg-ya-Y3i"/>
+                            <constraint firstItem="deb-6w-6cB" firstAttribute="trailing" secondItem="T8w-uc-6xq" secondAttribute="trailing" id="WYe-ef-b2k"/>
+                            <constraint firstItem="Zip-rN-USN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Z1p-zl-Cdy"/>
+                            <constraint firstItem="V85-dw-KUe" firstAttribute="leading" secondItem="deb-6w-6cB" secondAttribute="leading" id="ahd-qz-iQj"/>
+                            <constraint firstItem="V85-dw-KUe" firstAttribute="top" secondItem="Zip-rN-USN" secondAttribute="bottom" constant="8" symbolic="YES" id="eMe-Vo-ckP"/>
+                            <constraint firstItem="T8w-uc-6xq" firstAttribute="top" secondItem="deb-6w-6cB" secondAttribute="bottom" constant="8" symbolic="YES" id="fDh-1l-3Gh"/>
+                            <constraint firstItem="V85-dw-KUe" firstAttribute="trailing" secondItem="deb-6w-6cB" secondAttribute="trailing" id="te9-Og-hd0"/>
+                            <constraint firstItem="deb-6w-6cB" firstAttribute="top" secondItem="V85-dw-KUe" secondAttribute="bottom" constant="8" symbolic="YES" id="xQr-qu-V3W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myTextView" destination="T8w-uc-6xq" id="3qL-9g-76r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="28.817733990147783"/>
+        </scene>
+    </scenes>
+</document>
